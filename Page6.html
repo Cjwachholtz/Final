@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="MyStyle.css">
+
+
+
+    </head>
+
+    <body>
+<h1>Contact Information</h1>           
+<h2>Chase Wachholtz</h2>
+<form name="myForm" method="get" id="myForm">
+<!--Adj1-->           
+            <label for="adj1"><h3>What is your name?</h3></label>
+            <input type="text" id="adj1" name="adj1">
+            <p></p>
+<!--Adj2-->
+            <label for="adj2"><h3>What college are you recruiting from?</h3></label>
+            <input type="text" id="adj2" name="adj2">
+            <p></p>
+<!--Adj3-->
+            <label for="adj3"><h3>Why are you interested in me?</h3></label>
+            <input type="text" id="adj3" name="adj3">
+            <p></p>
+<!--Submit Button-->
+    <input type="submit" value="Create">
+
+           
+        </form>
+        <div id="putStory">
+           
+           
+        </div>
+        <script>
+var form = document.getElementById("myForm");
+
+            form.addEventListener("submit", function(event){
+                event.preventDefault();
+                var adj1 = document.getElementById("adj1").value;
+                var adj2 = document.getElementById("adj2").value;
+                var adj3 = document.getElementById("adj3").value;
+                var putStory = document.getElementById("putStory");
+                
+               
+                putStory.innerHTML = "Hello "+adj1+", My name is Chase Wachholtz.  "+adj2+" is a great collage. "+adj3+" is a great reason to be interested. <br> I hope that we can get in contact soon.<br> My phone number is 720-899-1931, my email is cjwachholtz@gmail.com. <br>If you would like to communicate with my parents, email jill0896@yahoo.com. <br> See you soon, thank you.";
+            });
+        </script>
+ <a href="index.html"> <p style="font-size:3vw;"><b> Home Page </b></p></a>
+    </body>
+</html>
